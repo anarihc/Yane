@@ -1,0 +1,38 @@
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                visibility 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.loader-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-logo-static {
+    width: 180px;
+    height: auto;
+    opacity: 0.9;
+}
+
+/* Ensure no scroll during loading */
+body.loading {
+    overflow: hidden;
+}
+
+/* ---- Mobile Adjustments ---- */
+@media (max-width: 768px) {
+    .loader-logo-static {
+        width: 140px;
+    }
+}

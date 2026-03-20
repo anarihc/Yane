@@ -1,0 +1,174 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; /* Enforces a minimum gap */
+    height: 80px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05); /* More see-through */
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Stronger liquid border */
+    /* The inset shadow simulates light bending / warping thickness at the glass edge */
+    box-shadow: inset 0px 0px 25px 5px rgba(255, 255, 255, 0.15), 0 4px 30px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    z-index: 1000;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 50px;
+    transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.header.scrolled {
+    right: 30px;
+    top: 20px;
+    height: 50px;
+    width: 450px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 20px;
+}
+
+/* Logos container relative for absolute positioning of logos on top of each other */
+.logo-container {
+    height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    transition: width 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.header.scrolled .logo-container {
+    width: 25px; /* Shrunk width for base logo */
+    height: 25px;
+}
+
+.logo {
+    position: absolute;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    object-fit: contain;
+    left: 0;
+}
+
+.logo-hrz {
+    width: 100px;
+    height: 40px;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.header.scrolled .logo-hrz {
+    opacity: 0;
+    transform: scale(0.5); /* Shrink while fading to make it look smooth */
+}
+
+.logo-base {
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.header.scrolled .logo-base {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #000000;
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.header.scrolled .nav {
+    gap: 15px;
+    font-size: 11px; /* Slightly shrink the text size */
+}
+
+.nav div {
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.nav div:hover {
+    opacity: 0.7;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 15px;
+        height: 60px;
+    }
+    .header.scrolled:not(.expanded) {
+        width: 50px; /* Compress into perfect circle on mobile */
+        right: 20px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        height: 50px;
+        cursor: pointer;
+    }
+    .header.scrolled:not(.expanded) .logo-container {
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header.scrolled.expanded {
+        width: calc(100% - 40px); /* Re-expands to full mobile width */
+        right: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 50px;
+    }
+    .nav {
+        gap: 12px;
+        font-size: 11px;
+        overflow-x: auto;
+        scrollbar-width: none; 
+        -ms-overflow-style: none;
+    }
+    .nav::-webkit-scrollbar {
+        display: none; 
+    }
+    
+    /* Liquid glass hiding effect for nav out of expanded state */
+    .header.scrolled:not(.expanded) .nav {
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        gap: 0; /* Ensures it squishes entirely without resisting */
+        pointer-events: none;
+    }
+    
+    /* Smoothly bring it back */
+    .header.scrolled.expanded .nav {
+        max-width: 300px;
+        opacity: 1;
+        overflow: visible;
+        pointer-events: auto;
+    }
+
+    .logo-container {
+        width: 60px; 
+    }
+    .logo-hrz {
+        width: 60px;
+        height: 24px;
+    }
+}

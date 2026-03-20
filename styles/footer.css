@@ -1,0 +1,74 @@
+.footer {
+    width: 100%;
+    padding: 6vw 12vw 3vw 12vw;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+    background: linear-gradient(to top, rgba(110, 122, 66, 0.5) 0%, transparent 100%);
+}
+
+.footer-logo {
+    height: 4vw;
+    width: auto;
+    opacity: 0.9;
+}
+
+.footer-info-grid {
+    display: flex;
+    gap: 6vw;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2vw;
+}
+
+.footer-label {
+    font-family: 'Source Code Pro', monospace;
+    font-size: clamp(10px, 0.8vw, 14px);
+    font-weight: 500;
+    color: #000000;
+    opacity: 0.9;
+}
+
+.footer-value {
+    font-family: 'Source Code Pro', monospace;
+    font-size: clamp(10px, 0.8vw, 14px);
+    color: #000000;
+    text-decoration: none;
+}
+
+/* ---- Mobile: stack footer columns ---- */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50vw 10vw 6vw 10vw; /* Increased padding to allow for a much smoother gradient transition */
+        gap: 8vw;
+        background: linear-gradient(to top, 
+            rgba(110, 122, 66, 0.8) 0%, 
+            rgba(110, 122, 66, 0.4) 40%, 
+            rgba(110, 122, 66, 0.1) 70%, 
+            transparent 100%
+        );
+
+    }
+    .footer-logo {
+        height: 10vw;
+    }
+    .footer-info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6vw 4vw;
+        width: 100%;
+    }
+    .footer-label, .footer-value {
+        font-size: 3.5vw;
+    }
+    
+}

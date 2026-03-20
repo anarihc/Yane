@@ -1,0 +1,44 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 12vw; /* Left margin */
+    padding-right: 12vw; /* Ensures it never touches the right edge */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 700px; /* Sets max-width container matching intended SVG size */
+    max-width: 100%; 
+}
+
+.hero-svg {
+    width: 100%; /* Fills parent container exactly to lock aspect ratio percentages */
+    max-width: 100%; 
+}
+
+.hero-text {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px; 
+    font-weight: 300;
+    color: #ffffff; 
+    /* 54px / 876px = 6.1643% */
+    margin: 15px 0 0 6.1643%; 
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+/* ---- Mobile Refinements ---- */
+@media (max-width: 768px) {
+    .hero-svg {
+        filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.8));
+    }
+    .hero-text {
+        text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    }
+}
+

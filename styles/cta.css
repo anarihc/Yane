@@ -1,0 +1,150 @@
+.cta-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6vw; /* Slightly larger gap to balance the text weight */
+    padding: 8vw 12vw;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Glass image container — Right side */
+.cta-glass {
+    width: 39.3vw;
+    height: 39.3vw;
+    flex-shrink: 0;
+    border-radius: 4vw;
+    position: relative;
+    overflow: hidden;
+
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px) saturate(100%) contrast(120%);
+    -webkit-backdrop-filter: blur(20px) saturate(100%) contrast(120%);
+
+    border: none;
+    box-shadow:
+        0 0 80px rgba(0, 0, 0, 0.15),
+        0 8px 32px 0 rgba(0, 0, 0, 0.03),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.cta-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0.15) 30%,
+        rgba(255, 255, 255, 0.35) 70%,
+        rgba(255, 255, 255, 0.5) 100%
+    );
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cta-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Left-hand text block — Right aligned content */
+.cta-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align overall block and button to the right */
+    max-width: 35vw;
+}
+
+.cta-title {
+    font-family: 'Arsenica Trial', serif;
+    font-weight: 700;
+    font-size: 4.5vw;
+    color: #ffffff;
+    line-height: 1.1;
+    margin: 0;
+    text-align: right;
+}
+
+.cta-body {
+    font-family: 'Source Code Pro', monospace;
+    font-size: clamp(11px, 1.1vw, 18px);
+    color: #ffffff;
+    line-height: 1.5;
+    margin: 1.5vw 0 2vw 0;
+    text-align: right;
+    letter-spacing: 0.02em;
+}
+
+/* Button styling — White pill with arrow */
+.cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    width: 5vw;
+    height: 2.8vw;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    border: none;
+    margin-top: 1vw;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.cta-arrow {
+    width: 1.8vw;
+    height: auto;
+}
+
+/* ---- Mobile: stack vertically ---- */
+@media (max-width: 768px) {
+    .cta-section {
+        flex-direction: column-reverse; /* Keep image at the bottom or top depending on preference, usually image follows text in mobile CTA */
+        padding: 12vw 10vw;
+        gap: 8vw;
+    }
+    .cta-glass {
+        width: 80vw;
+        height: 80vw;
+        border-radius: 60px;
+    }
+    .cta-text-wrapper {
+        max-width: 100%;
+        align-items: center; /* Center on mobile */
+    }
+    .cta-title {
+        font-size: 10vw;
+        text-align: center;
+    }
+    .cta-body {
+        font-size: 3.5vw;
+        text-align: center;
+        margin: 4vw 0 6vw 0;
+    }
+    .cta-button {
+        width: 15vw;
+        height: 8vw;
+        margin-top: 0;
+    }
+    .cta-arrow {
+        width: 6vw;
+    }
+}
