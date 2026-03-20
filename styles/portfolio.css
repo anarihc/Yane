@@ -117,7 +117,7 @@
 
 .port-heading {
     font-family: 'Abril Fatface', serif;
-    font-size: 3.5vw;
+    font-size: 3vw;
     color: #ffffff;
     margin: 0 0 1.2vw 0;
     line-height: 1;
@@ -147,7 +147,7 @@
         padding-bottom: 20px;
     }
     .portfolio-title {
-        font-size: 11vw;
+        font-size: 8vw;
     }
     .portfolio-card {
         width: 80vw;
