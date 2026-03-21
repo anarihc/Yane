@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About | Yane.io</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1a1c13">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@100;200;300;400;500;600&family=Archivo+Black&family=Pinyon+Script&family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/arsenica-trial" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/hero.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/loader.css">
+    <link rel="icon" type="image/png" href="../assets/base-logo-2.png">
+    <link rel="apple-touch-icon" href="../assets/base-log-2.png">
+    <style>
+        .about-content {
+            padding: 120px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #fff;
+        }
+
+        .about-title {
+            font-family: 'arsenica-trial', serif;
+            font-size: clamp(3rem, 10vw, 6rem);
+            line-height: 1;
+            margin-bottom: 60px;
+            text-transform: uppercase;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 80px;
+            margin-top: 80px;
+        }
+
+        .about-sidebar {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            opacity: 0.6;
+        }
+
+        .about-body {
+            font-family: 'arsenica-trial', serif;
+            font-size: 1.5rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .about-body p {
+            margin-bottom: 40px;
+        }
+
+        .highlight {
+            color: #d4ff00; /* A vibrant accent if needed, otherwise keep it monochromatic */
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .about-content {
+                padding-top: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body class="loading">
+    <div id="loader" class="loader-overlay">
+        <img src="../assets/Yane_Vertical.png" class="loader-logo-static" alt="Yane Enterprises">
+    </div>
+
+    <header class="header" id="main-header">
+        <div class="logo-container">
+            <a href="/" style="display: flex; align-items: center; text-decoration: none;">
+                <img class="logo logo-hrz" src="../assets/Hrz.png">
+                <img class="logo logo-base" src="../assets/base-logo.png">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="/about" style="color: inherit; text-decoration: none;">ABOUT</a>
+            <a href="/#portfolio" style="color: inherit; text-decoration: none;">PORTFOLIO</a>
+            <a href="/#invest" style="color: inherit; text-decoration: none;">INVEST</a>
+            <a href="/#contact" style="color: inherit; text-decoration: none;">CONTACT</a>
+        </nav>
+    </header>
+
+    <main class="about-content">
+        <h1 class="about-title">The Foundation<br>of Yane</h1>
+        
+        <div class="about-grid">
+            <div class="about-sidebar">
+                01 — ORIGIN & MISSION
+            </div>
+            <div class="about-body">
+                <p>Yane Enterprises was born out of a desire to build something that lasts. In an era of rapid change, we focus on the fundamentals: quality, resilience, and long-term value.</p>
+                <p>We are a Sri Lankan holding company with a global outlook. Our mission is to identify, build, and compound businesses that define the next generation of industry in our region.</p>
+            </div>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-sidebar">
+                02 — OUR APPROACH
+            </div>
+            <div class="about-body">
+                <p>We don't just invest capital; we invest time and strategy. Every project under the Yane umbrella is built from the ground up, ensuring that its DNA aligns with our core pillars: Create, Build, and Compound.</p>
+                <p>From informatics to artisanal tea, our portfolio is diverse but unified by a single standard of excellence.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <img src="../assets/Hrz.png" class="footer-logo" alt="Yane Logo">
+        
+        <div class="footer-info-grid">
+            <div class="footer-column">
+                <span class="footer-label">Management:</span>
+                <a href="mailto:info@yane.io" class="footer-value">info@yane.io</a>
+            </div>
+            <div class="footer-column">
+                <span class="footer-label">Instagram:</span>
+                <a href="https://instagram.com/anarihcc" target="_blank" class="footer-value">@anarihcc</a>
+            </div>
+            <div class="footer-column">
+                <span class="footer-label">Made by:</span>
+                <span class="footer-value">Chirana Yaneth</span>
+            </div>
+            <div class="footer-column">
+                <span class="footer-label">Rights:</span>
+                <span class="footer-value">All rights reserved</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Handle Loader Removal
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                document.body.classList.remove('loading');
+            }, 800);
+        });
+
+        const header = document.getElementById('main-header');
+        const logoContainer = document.querySelector('.logo-container');
+
+        logoContainer.addEventListener('click', () => {
+            if (window.innerWidth <= 768 && header.classList.contains('scrolled')) {
+                header.classList.toggle('expanded');
+            }
+        });
+
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > 50) {
+                header.classList.add('scrolled');
+                if (header.classList.contains('expanded') && Math.abs(currentScrollY - lastScrollY) > 30) {
+                    header.classList.remove('expanded');
+                }
+            } else {
+                header.classList.remove('scrolled');
+                header.classList.remove('expanded');
+            }
+            lastScrollY = currentScrollY;
+        });
+    </script>
+</body>
+</html>
