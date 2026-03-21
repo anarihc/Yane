@@ -1,75 +1,295 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About | Yane.io</title>
+    <meta charset="UTF-8">
+    <title>About Yane Enterprises — Chirana Yaneth</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#1a1c13">
+    <meta name="description" content="Yane Enterprises is a Sri Lankan holding company founded by Chirana Yaneth. Learn about our mission, values, and the vision behind everything we build.">
+    <meta name="keywords" content="Yane, Yane Enterprises, Chirana Yaneth, Sri Lanka holding company, Sri Lankan entrepreneur">
+    <link rel="canonical" href="https://yane.io/about">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yane.io/about">
+    <meta property="og:title" content="About Yane Enterprises — Chirana Yaneth">
+    <meta property="og:description" content="Yane Enterprises is a Sri Lankan holding company. Learn about our mission, values, and vision.">
+    <meta property="og:image" content="../assets/Yane_Vertical.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yane.io/about">
+    <meta property="twitter:title" content="About Yane Enterprises — Chirana Yaneth">
+    <meta property="twitter:description" content="Yane Enterprises is a Sri Lankan holding company. Learn about our mission, values, and vision.">
+    <meta property="twitter:image" content="../assets/Yane_Vertical.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Yane Enterprises",
+      "url": "https://yane.io",
+      "logo": "https://yane.io/assets/base-logo-2.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Chirana Yaneth"
+      },
+      "description": "A Sri Lankan holding company investing in brands, businesses, and ideas that define a generation."
+    }
+    </script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@100;200;300;400;500;600&family=Archivo+Black&family=Pinyon+Script&family=Abril+Fatface&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/arsenica-trial" rel="stylesheet">
+    
     <link rel="stylesheet" href="../styles/general.css">
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/hero.css">
+    <link rel="stylesheet" href="../styles/how-it-works.css">
+    <link rel="stylesheet" href="../styles/vision.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/loader.css">
+    
     <link rel="icon" type="image/png" href="../assets/base-logo-2.png">
     <link rel="apple-touch-icon" href="../assets/base-log-2.png">
+
     <style>
-        .about-content {
-            padding: 120px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-            color: #fff;
+        /* Custom Section 1: Hero Adjustments */
+        .about-hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 180px 12vw 100px;
+            box-sizing: border-box;
         }
-
-        .about-title {
-            font-family: 'arsenica-trial', serif;
-            font-size: clamp(3rem, 10vw, 6rem);
-            line-height: 1;
-            margin-bottom: 60px;
-            text-transform: uppercase;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 80px;
-            margin-top: 80px;
-        }
-
-        .about-sidebar {
+        
+        .label-mono {
             font-family: 'Source Code Pro', monospace;
-            font-size: 0.9rem;
+            font-size: 14px;
+            letter-spacing: 0.3em;
+            color: rgba(255, 255, 255, 0.6);
             text-transform: uppercase;
+            margin-bottom: 2vw;
+        }
+
+        .about-hero-title {
+            font-family: 'Arsenica Trial', serif;
+            font-size: 6vw;
+            line-height: 1.1;
+            color: #ffffff;
+            margin: 0;
+            max-width: 50vw;
+        }
+
+        .about-hero-subtext {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 1.2vw;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 3vw;
+            max-width: 40vw;
+            text-transform: uppercase;
+        }
+
+        /* Section 2: Who We Are */
+        .who-we-are {
+            display: flex;
+            padding: 10vw 12vw;
+            gap: 8vw;
+            align-items: center;
+        }
+
+        .who-left {
+            flex: 1;
+        }
+
+        .who-right {
+            flex: 1;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 1vw;
+            line-height: 2;
+            color: rgba(255, 255, 255, 0.9);
+            text-transform: uppercase;
+        }
+
+        .who-right p {
+            margin-bottom: 2vw;
+        }
+
+        .outlined-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1vw;
+        }
+
+        .outlined-text {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 6vw;
+            line-height: 1;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+        }
+
+        /* Section 3: Values Title */
+        .values-header {
+            padding: 0 12vw;
+            margin-bottom: 4vw;
+        }
+
+        .values-title {
+            font-family: 'Arsenica Trial', serif;
+            font-size: 4vw;
+            color: #ffffff;
+            margin-top: 1vw;
+        }
+
+        /* Section 3: Principles Grid Refinements */
+        .pillars-grid {
+            display: grid !important;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2vw;
+            width: 100%;
+            max-width: 90vw;
+            margin: 4vw auto 0;
+        }
+
+        .pillar-card {
+            aspect-ratio: 1 / 1;
+            width: 100%;
+            height: auto !important;
+            min-height: unset !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2.5vw !important;
+            border-radius: 2vw !important;
+            box-sizing: border-box;
+        }
+
+        .pillar-number {
+            font-size: 2vw !important;
+            -webkit-text-stroke: 0.05vw #ffffff !important;
+        }
+
+        .pillar-heading {
+            font-size: 1.8vw !important;
+            margin-bottom: 1vw !important;
+        }
+
+        .pillar-text {
+            font-size: 0.85vw !important;
+            line-height: 1.5 !important;
+        }
+
+        /* Section 4: Divider */
+        .divider-container {
+            width: 100%;
+            padding: 6vw 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .divider-line {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+            z-index: 1;
+        }
+
+        .divider-text {
+            background: #1a1c13; /* Match site background to cover line */
+            padding: 0 2vw;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 12px;
+            letter-spacing: 0.5em;
+            color: rgba(255, 255, 255, 0.6);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Section 5: Founder refinements */
+        .founder-photo {
+            object-position: center 70%;
+            filter: none !important;
+            transition: transform 0.8s ease;
+        }
+
+        .founder-headline {
+            font-family: 'Arsenica Trial', serif;
+            font-size: 4vw;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .founder-label {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 12px;
             letter-spacing: 0.2em;
-            opacity: 0.6;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 1vw 0 2vw 0;
+            text-transform: uppercase;
         }
 
-        .about-body {
-            font-family: 'arsenica-trial', serif;
-            font-size: 1.5rem;
-            line-height: 1.6;
-            font-weight: 300;
+        .founder-bio {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 1vw;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
         }
 
-        .about-body p {
-            margin-bottom: 40px;
-        }
-
-        .highlight {
-            color: #d4ff00; /* A vibrant accent if needed, otherwise keep it monochromatic */
-        }
-
+        /* Responsive */
         @media (max-width: 768px) {
-            .about-grid {
-                grid-template-columns: 1fr;
+            .about-hero {
+                padding: 120px 10vw 60px;
+                height: auto;
+            }
+            .about-hero-title { font-size: 10vw; max-width: 100%; }
+            .about-hero-subtext { font-size: 4vw; max-width: 100%; }
+
+            .who-we-are {
+                flex-direction: column;
+                padding: 60px 10vw;
                 gap: 40px;
+                align-items: flex-start;
+            }
+            .outlined-text { font-size: 11vw; }
+            .who-right { font-size: 3.5vw; }
+
+            .values-title { font-size: 8vw; }
+
+            .pillars-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                max-width: 100%;
+            }
+
+            .pillar-card {
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                border-radius: 60px !important;
+                padding: 30px !important;
+                overflow: hidden !important;
             }
             
-            .about-content {
-                padding-top: 100px;
+            .pillar-heading {
+                font-size: 8vw;
+                margin-bottom: 15px;
             }
+            
+            .pillar-text {
+                font-size: 3.2vw;
+            }
+            
+            .founder-headline { font-size: 8vw; }
+            .founder-bio { font-size: 3.5vw; }
         }
     </style>
 </head>
@@ -79,11 +299,12 @@
         <img src="../assets/Yane_Vertical.png" class="loader-logo-static" alt="Yane Enterprises">
     </div>
 
+    <!-- Header -->
     <header class="header" id="main-header">
         <div class="logo-container">
             <a href="/" style="display: flex; align-items: center; text-decoration: none;">
-                <img class="logo logo-hrz" src="../assets/Hrz.png">
-                <img class="logo logo-base" src="../assets/base-logo.png">
+                <img class="logo logo-hrz" src="../assets/Hrz.png" alt="Yane Logo Horizontal">
+                <img class="logo logo-base" src="../assets/base-logo.png" alt="Yane Logo Icon">
             </a>
         </div>
         <nav class="nav">
@@ -94,30 +315,89 @@
         </nav>
     </header>
 
-    <main class="about-content">
-        <h1 class="about-title">The Foundation<br>of Yane</h1>
-        
-        <div class="about-grid">
-            <div class="about-sidebar">
-                01 — ORIGIN & MISSION
-            </div>
-            <div class="about-body">
-                <p>Yane Enterprises was born out of a desire to build something that lasts. In an era of rapid change, we focus on the fundamentals: quality, resilience, and long-term value.</p>
-                <p>We are a Sri Lankan holding company with a global outlook. Our mission is to identify, build, and compound businesses that define the next generation of industry in our region.</p>
+    <!-- SECTION 1 — PAGE HERO -->
+    <section class="about-hero">
+        <span class="label-mono">ABOUT YANE</span>
+        <h1 class="about-hero-title">More Than a Company.<br>A Framework for Growth.</h1>
+        <p class="about-hero-subtext">
+            Yane is a Sri Lankan holding company built on a simple belief — that great businesses, built patiently, compound into something extraordinary.
+        </p>
+    </section>
+
+    <!-- SECTION 2 — WHO WE ARE -->
+    <section class="who-we-are">
+        <div class="who-left">
+            <div class="outlined-stack">
+                <span class="outlined-text">CREATE</span>
+                <span class="outlined-text">BUILD</span>
+                <span class="outlined-text">COMPOUND</span>
             </div>
         </div>
+        <div class="who-right">
+            <p>Yane Enterprises was born out of a desire to build something that lasts. In an era of rapid change, we focus on the fundamentals: quality, resilience, and long-term value.</p>
+            <p>We are a Sri Lankan holding company with a global outlook. Our mission is to identify, build, and compound businesses that define the next generation of industry in our region.</p>
+            <p>We don't just invest capital — we invest time and strategy. Every company under the Yane umbrella is built from the ground up, ensuring its DNA aligns with our core pillars: Create, Build, and Compound.</p>
+        </div>
+    </section>
 
-        <div class="about-grid">
-            <div class="about-sidebar">
-                02 — OUR APPROACH
+    <!-- SECTION 3 — OUR VALUES -->
+    <section class="values-header">
+        <span class="label-mono">WHAT WE STAND FOR</span>
+        <h2 class="values-title">The Principles Behind Every Decision</h2>
+    </section>
+
+    <section class="how-it-works" style="padding-top: 0;">
+        <div class="pillars-grid">
+            <!-- Value 01 -->
+            <div class="pillar-card">
+                <span class="pillar-number">01</span>
+                <h3 class="pillar-heading">Quality is Non-Negotiable</h3>
+                <p class="pillar-text">Every company under Yane is held to a premium standard. We'd rather do less and do it right than scale something we're not proud of.</p>
             </div>
-            <div class="about-body">
-                <p>We don't just invest capital; we invest time and strategy. Every project under the Yane umbrella is built from the ground up, ensuring that its DNA aligns with our core pillars: Create, Build, and Compound.</p>
-                <p>From informatics to artisanal tea, our portfolio is diverse but unified by a single standard of excellence.</p>
+            <!-- Value 02 -->
+            <div class="pillar-card">
+                <span class="pillar-number">02</span>
+                <h3 class="pillar-heading">Calculated Risk</h3>
+                <p class="pillar-text">We're not reckless and we're not timid. Every move is thought through — but once the decision is made, we commit fully.</p>
+            </div>
+            <!-- Value 03 -->
+            <div class="pillar-card">
+                <span class="pillar-number">03</span>
+                <h3 class="pillar-heading">Learn and Move On</h3>
+                <p class="pillar-text">We don't dwell. When something doesn't work we take the lesson, drop the baggage, and move forward.</p>
+            </div>
+            <!-- Value 04 -->
+            <div class="pillar-card">
+                <span class="pillar-number">04</span>
+                <h3 class="pillar-heading">Impact Over Everything</h3>
+                <p class="pillar-text">At the end of it all, we want to be remembered for what we built for Sri Lanka — not just what we earned from it.</p>
             </div>
         </div>
-    </main>
+    </section>
 
+    <!-- SECTION 4 — DIVIDER -->
+    <div class="divider-container">
+        <div class="divider-line"></div>
+        <span class="divider-text">— THE FOUNDER —</span>
+    </div>
+
+    <!-- SECTION 5 — FOUNDER -->
+    <section class="vision-section">
+        <div class="vision-glass">
+            <img src="assets/chirana.jpg" class="vision-statue founder-photo" alt="Chirana Yaneth">
+        </div>
+        <div class="vision-text-wrapper">
+            <h2 class="founder-headline">Chirana Yaneth</h2>
+            <span class="founder-label">Founder, Chairman & CEO — Yane</span>
+            <p class="founder-bio">
+                "I'm Chirana Yaneth — founder, chairman, and CEO of Yane. I always knew a regular career path wasn't for me. Trading my time for a salary never felt right. I wanted to build something. Something real, something lasting, something worth waking up for.
+                <br><br>
+                Yane was never meant to be just one business. From the beginning, the vision was a portfolio — a collection of companies across different industries, each one built carefully and held for the long term. Not chasing trends. Not rushing exits. Just building, compounding, and letting time do its work."
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <img src="../assets/Hrz.png" class="footer-logo" alt="Yane Logo">
         
@@ -154,9 +434,12 @@
         const header = document.getElementById('main-header');
         const logoContainer = document.querySelector('.logo-container');
 
-        logoContainer.addEventListener('click', () => {
+        logoContainer.addEventListener('click', (e) => {
             if (window.innerWidth <= 768 && header.classList.contains('scrolled')) {
-                header.classList.toggle('expanded');
+                if (!header.classList.contains('expanded')) {
+                    e.preventDefault();
+                    header.classList.add('expanded');
+                }
             }
         });
 
