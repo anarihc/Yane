@@ -174,9 +174,12 @@
         const logoContainer = document.querySelector('.logo-container');
 
         // Allow user to click logo to expand header on mobile
-        logoContainer.addEventListener('click', () => {
+        logoContainer.addEventListener('click', (e) => {
             if (window.innerWidth <= 768 && header.classList.contains('scrolled')) {
-                header.classList.toggle('expanded');
+                if (!header.classList.contains('expanded')) {
+                    e.preventDefault();
+                    header.classList.add('expanded');
+                }
             }
         });
 
