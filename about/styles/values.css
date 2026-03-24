@@ -1,0 +1,125 @@
+/* Section 3: Values Title */
+.values-header {
+    padding: 0 12vw;
+    margin-bottom: 4vw;
+}
+
+.values-title {
+    font-family: 'Arsenica Trial', serif;
+    font-size: 4vw;
+    color: #ffffff;
+    margin-top: 1vw;
+}
+
+/* Section 3: Principles grid — desktop 4-up; mobile matches home “Three Pillars” */
+.about-values .pillars-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+    width: 100%;
+    max-width: 90vw;
+    margin: 4vw auto 0;
+}
+
+.about-values .pillar-card {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto !important;
+    min-height: unset !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* Fixed padding — does not shrink when the window / columns get narrow */
+    padding: 24px !important;
+    border-radius: 3vw !important;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+/*
+ * Fallback (no container queries): scale with viewport — no low max cap so type grows on large screens.
+ * ~proportional to one column width in a 4-up grid (≈22vw).
+ */
+.about-values .pillar-number {
+    font-size: max(12px, 2.85vw);
+    -webkit-text-stroke: max(0.5px, 0.12vw) #ffffff;
+    margin: 0;
+}
+
+.about-values .pillar-heading {
+    font-size: max(11px, 2.35vw);
+    margin: 0 0 1vw;
+    line-height: 0.9;
+}
+
+.about-values .pillar-text {
+    font-size: max(9px, 1.55vw);
+    line-height: 1.6;
+}
+
+/* Desktop layout + vw fallback spacing (overridden below when container queries work) */
+@media (min-width: 769px) {
+    .about-values .pillar-card {
+        justify-content: flex-start;
+    }
+
+    .about-values .pillar-number {
+        line-height: 1;
+        margin-bottom: 0.35vw;
+    }
+
+    .about-values .pillar-heading {
+        margin: 0 0 0.45vw;
+        line-height: 1.1;
+        min-height: 2.2em;
+    }
+
+    .about-values .pillar-text {
+        line-height: 1;
+        margin: 0;
+        overflow-wrap: anywhere;
+    }
+}
+
+/*
+ * Card-sized type: scales with the card (large window → large card → large type).
+ * Only a minimum px floor — no max cap so copy can fill the glass card.
+ */
+@supports (font-size: 1cqi) {
+    @media (min-width: 769px) {
+        .about-values .pillar-card {
+            container-type: size;
+            container-name: value-card;
+        }
+
+        .about-values .pillar-number {
+            font-size: max(12px, 13cqi);
+            -webkit-text-stroke: max(0.5px, 0.5cqi) #ffffff;
+            margin-bottom: max(4px, 1.4cqi);
+        }
+
+        .about-values .pillar-heading {
+            font-size: max(11px, 10.5cqi);
+            margin: 0 0 max(3px, 1.1cqi);
+        }
+
+        .about-values .pillar-text {
+            font-size: max(9px, 6cqi);
+            line-height: 1.2;
+        }
+
+        /* Wider cards (typical full-screen desktop): larger body so the glass doesn’t feel empty */
+        @container value-card (min-width: 300px) {
+            .about-values .pillar-text {
+                font-size: max(9px, 7.35cqi);
+            }
+        }
+
+        @container value-card (min-width: 400px) {
+            .about-values .pillar-text {
+                font-size: max(10px, 8.1cqi);
+            }
+        }
+    }
+}

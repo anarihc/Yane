@@ -1,0 +1,59 @@
+/* Section 4: Divider */
+        .divider-container {
+            width: 100%;
+            padding: 6vw 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .divider-line {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+            z-index: 1;
+        }
+
+        .divider-text {
+            background: #1a1c13; /* Match site background to cover line */
+            padding: 0 2vw;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 12px;
+            letter-spacing: 0.5em;
+            color: rgba(255, 255, 255, 0.6);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Section 5: Founder refinements */
+        .founder-photo {
+            object-position: center 70%;
+            filter: none !important;
+            transition: transform 0.8s ease;
+        }
+
+        .founder-headline {
+            font-family: 'Arsenica Trial', serif;
+            font-size: 4vw;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .founder-label {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 12px;
+            letter-spacing: 0.2em;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 1vw 0 2vw 0;
+            text-transform: uppercase;
+        }
+
+        .founder-bio {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 1vw;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            text-transform: uppercase;
+        }

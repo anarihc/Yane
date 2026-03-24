@@ -1,0 +1,39 @@
+ /* Section 2: Who We Are */
+ .who-we-are {
+    display: flex;
+    padding: 10vw 12vw;
+    gap: 8vw;
+    align-items: center;
+}
+
+.who-left {
+    flex: 1;
+}
+
+.who-right {
+    flex: 1;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1vw;
+    line-height: 2;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+}
+
+.who-right p {
+    margin-bottom: 2vw;
+}
+
+.outlined-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.outlined-text {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 6vw;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+}
