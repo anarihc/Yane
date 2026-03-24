@@ -86,7 +86,7 @@
                     </div>
                     <p class="port-expanded-text">Yane Informatics is Yane's digital arm — building high-end websites and brand identities for clients who understand that design is not decoration, it's strategy. Every pixel is intentional. Every project is built to the same premium standard we hold all Yane companies to.</p>
                     <div class="port-expanded-meta">
-                        <span class="meta-item"><strong>Website:</strong> informatics.yane.io</span>
+                        <span class="meta-item"><strong>Website:</strong> <a href="https://informatics.yane.io" target="_blank" style="color: inherit; text-decoration: underline; text-underline-offset: 4px;">informatics.yane.io</a></span>
                         <span class="meta-item"><strong>Ownership:</strong> 100% Yane</span>
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                     </div>
                     <p class="port-expanded-text">Sith Sevana is an online counselling platform with a simple but powerful goal — to make mental health support accessible to everyone in Sri Lanka, regardless of where they are or what they can afford. We believe mental wellness is not a luxury. It is a right.</p>
                     <div class="port-expanded-meta">
-                        <span class="meta-item"><strong>Website:</strong> sithsevana.lk</span>
+                        <span class="meta-item"><strong>Website:</strong> <a href="https://sithsevana.lk" target="_blank" style="color: inherit; text-decoration: underline; text-underline-offset: 4px;">sithsevana.lk</a></span>
                         <span class="meta-item"><strong>Ownership:</strong> 50% Yane</span>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                     </div>
                     <p class="port-expanded-text">Estate 006 is Yane's tribute to one of Sri Lanka's greatest gifts to the world — Ceylon tea. We don't just sell tea. We sell a story, a standard, and a piece of this island. Built for the premium market, Estate 006 carries the weight of Sri Lankan heritage in every cup.</p>
                     <div class="port-expanded-meta">
-                        <span class="meta-item"><strong>Website:</strong> 006.yane.io</span>
+                        <span class="meta-item"><strong>Website:</strong> <a href="https://006.yane.io" target="_blank" style="color: inherit; text-decoration: underline; text-underline-offset: 4px;">006.yane.io</a></span>
                         <span class="meta-item"><strong>Ownership:</strong> 100% Yane</span>
                     </div>
                 </div>
@@ -229,7 +229,6 @@
 
             cardElement.classList.add('is-expanded');
             overlay.classList.add('active');
-            document.body.classList.add('modal-open');
         }
 
         function closeCard(event, btnElement) {
@@ -244,7 +243,6 @@
 
             card.classList.remove('is-expanded');
             overlay.classList.remove('active');
-            document.body.classList.remove('modal-open');
         }
 
         overlay.addEventListener('click', () => {
@@ -256,7 +254,6 @@
                 card.classList.remove('is-expanded');
             });
             overlay.classList.remove('active');
-            document.body.classList.remove('modal-open');
         });
 
         // Handle Loader Removal
