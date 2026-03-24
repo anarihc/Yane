@@ -3,7 +3,7 @@ html, body {
     min-height: 100vh;
     overscroll-behavior: none;
     background-color: #1a1c13; /* Fallback for smooth overscroll transitions */
-    background-image: url("../assets/bg-7.png");
+    background-image: url("../assets/bg.webp");
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;

@@ -50,200 +50,20 @@
     <link rel="stylesheet" href="../styles/vision.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/loader.css">
-    
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/whoweare.css">
+    <link rel="stylesheet" href="styles/values.css">
+    <link rel="stylesheet" href="styles/founder.css">
+
     <link rel="icon" type="image/png" href="../assets/base-logo-2.png">
     <link rel="apple-touch-icon" href="../assets/base-log-2.png">
 
     <style>
-        /* Custom Section 1: Hero Adjustments */
-        .about-hero {
-            min-height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 180px 12vw 100px;
-            box-sizing: border-box;
-        }
+
+
+       
         
-        .label-mono {
-            font-family: 'Source Code Pro', monospace;
-            font-size: 14px;
-            letter-spacing: 0.3em;
-            color: rgba(255, 255, 255, 0.6);
-            text-transform: uppercase;
-            margin-bottom: 2vw;
-        }
-
-        .about-hero-title {
-            font-family: 'Arsenica Trial', serif;
-            font-size: 6vw;
-            line-height: 1.1;
-            color: #ffffff;
-            margin: 0;
-            max-width: 50vw;
-        }
-
-        .about-hero-subtext {
-            font-family: 'Source Code Pro', monospace;
-            font-size: 1.2vw;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.8);
-            margin-top: 3vw;
-            max-width: 40vw;
-            text-transform: uppercase;
-        }
-
-        /* Section 2: Who We Are */
-        .who-we-are {
-            display: flex;
-            padding: 10vw 12vw;
-            gap: 8vw;
-            align-items: center;
-        }
-
-        .who-left {
-            flex: 1;
-        }
-
-        .who-right {
-            flex: 1;
-            font-family: 'Source Code Pro', monospace;
-            font-size: 1vw;
-            line-height: 2;
-            color: rgba(255, 255, 255, 0.9);
-            text-transform: uppercase;
-        }
-
-        .who-right p {
-            margin-bottom: 2vw;
-        }
-
-        .outlined-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 1vw;
-        }
-
-        .outlined-text {
-            font-family: 'Archivo Black', sans-serif;
-            font-size: 6vw;
-            line-height: 1;
-            color: transparent;
-            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
-            text-transform: uppercase;
-        }
-
-        /* Section 3: Values Title */
-        .values-header {
-            padding: 0 12vw;
-            margin-bottom: 4vw;
-        }
-
-        .values-title {
-            font-family: 'Arsenica Trial', serif;
-            font-size: 4vw;
-            color: #ffffff;
-            margin-top: 1vw;
-        }
-
-        /* Section 3: Principles Grid Refinements */
-        .pillars-grid {
-            display: grid !important;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2vw;
-            width: 100%;
-            max-width: 90vw;
-            margin: 4vw auto 0;
-        }
-
-        .pillar-card {
-            aspect-ratio: 1 / 1;
-            width: 100%;
-            height: auto !important;
-            min-height: unset !important;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 2.5vw !important;
-            border-radius: 2vw !important;
-            box-sizing: border-box;
-        }
-
-        .pillar-number {
-            font-size: 2vw !important;
-            -webkit-text-stroke: 0.05vw #ffffff !important;
-        }
-
-        .pillar-heading {
-            font-size: 1.8vw !important;
-            margin-bottom: 1vw !important;
-        }
-
-        .pillar-text {
-            font-size: 0.85vw !important;
-            line-height: 1.5 !important;
-        }
-
-        /* Section 4: Divider */
-        .divider-container {
-            width: 100%;
-            padding: 6vw 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .divider-line {
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
-            z-index: 1;
-        }
-
-        .divider-text {
-            background: #1a1c13; /* Match site background to cover line */
-            padding: 0 2vw;
-            font-family: 'Source Code Pro', monospace;
-            font-size: 12px;
-            letter-spacing: 0.5em;
-            color: rgba(255, 255, 255, 0.6);
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Section 5: Founder refinements */
-        .founder-photo {
-            object-position: center 70%;
-            filter: none !important;
-            transition: transform 0.8s ease;
-        }
-
-        .founder-headline {
-            font-family: 'Arsenica Trial', serif;
-            font-size: 4vw;
-            color: #ffffff;
-            margin: 0;
-        }
-
-        .founder-label {
-            font-family: 'Source Code Pro', monospace;
-            font-size: 12px;
-            letter-spacing: 0.2em;
-            color: rgba(255, 255, 255, 0.5);
-            margin: 1vw 0 2vw 0;
-            text-transform: uppercase;
-        }
-
-        .founder-bio {
-            font-family: 'Source Code Pro', monospace;
-            font-size: 1vw;
-            line-height: 1.8;
-            color: rgba(255, 255, 255, 0.8);
-            text-transform: uppercase;
-        }
+        
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -265,27 +85,43 @@
 
             .values-title { font-size: 8vw; }
 
-            .pillars-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
+            .about-values .pillars-grid {
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
                 max-width: 100%;
+                margin-top: 40px;
             }
 
-            .pillar-card {
-                width: 100%;
-                aspect-ratio: 1 / 1;
+            /* Same glass + type scale as home pillars; height grows so longer value copy is not clipped */
+            .about-values .pillar-card {
+                width: 80vw;
+                max-width: 100%;
+                min-height: max(320px, 72vw);
+                height: auto !important;
+               
                 border-radius: 60px !important;
-                padding: 30px !important;
-                overflow: hidden !important;
+                padding: 40px !important;
+                overflow: visible !important;
+                justify-content: flex-start;
             }
-            
-            .pillar-heading {
-                font-size: 8vw;
+
+            .about-values .pillar-number {
+                font-size: 10vw;
+                -webkit-text-stroke: 1px #ffffff;
                 margin-bottom: 15px;
             }
-            
-            .pillar-text {
-                font-size: 3.2vw;
+
+            .about-values .pillar-heading {
+                font-size: 10vw;
+                margin-bottom: 20px;
+                line-height: 1.05;
+            }
+
+            .about-values .pillar-text {
+                font-size: max(12px, 3.5vw);
+                line-height: 1.65;
             }
             
             .founder-headline { font-size: 8vw; }
@@ -346,31 +182,31 @@
         <h2 class="values-title">The Principles Behind Every Decision</h2>
     </section>
 
-    <section class="how-it-works" style="padding-top: 0;">
+    <section class="how-it-works about-values" style="padding-top: 0;">
         <div class="pillars-grid">
             <!-- Value 01 -->
             <div class="pillar-card">
                 <span class="pillar-number">01</span>
-                <h3 class="pillar-heading">Quality is Non-Negotiable</h3>
-                <p class="pillar-text">Every company under Yane is held to a premium standard. We'd rather do less and do it right than scale something we're not proud of.</p>
+                <h3 class="pillar-heading">Quality</h3>
+                <p class="pillar-text">We'd rather do less and do it right than scale something we're not proud of.</p>
             </div>
             <!-- Value 02 -->
             <div class="pillar-card">
                 <span class="pillar-number">02</span>
                 <h3 class="pillar-heading">Calculated Risk</h3>
-                <p class="pillar-text">We're not reckless and we're not timid. Every move is thought through — but once the decision is made, we commit fully.</p>
+                <p class="pillar-text">We're not reckless and we're not timid. Every move is thought through.</p>
             </div>
             <!-- Value 03 -->
             <div class="pillar-card">
                 <span class="pillar-number">03</span>
                 <h3 class="pillar-heading">Learn and Move On</h3>
-                <p class="pillar-text">We don't dwell. When something doesn't work we take the lesson, drop the baggage, and move forward.</p>
+                <p class="pillar-text">Take the lesson, leave the rest, and keep building.</p>
             </div>
             <!-- Value 04 -->
             <div class="pillar-card">
                 <span class="pillar-number">04</span>
-                <h3 class="pillar-heading">Impact Over Everything</h3>
-                <p class="pillar-text">At the end of it all, we want to be remembered for what we built for Sri Lanka — not just what we earned from it.</p>
+                <h3 class="pillar-heading">Impact</h3>
+                <p class="pillar-text">Everything we build, we build with Sri Lanka in mind.</p>
             </div>
         </div>
     </section>
@@ -384,7 +220,7 @@
     <!-- SECTION 5 — FOUNDER -->
     <section class="vision-section">
         <div class="vision-glass">
-            <img src="assets/chirana.jpg" class="vision-statue founder-photo" alt="Chirana Yaneth">
+            <img src="assets/chirana.webp" class="vision-statue founder-photo" alt="Chirana Yaneth">
         </div>
         <div class="vision-text-wrapper">
             <h2 class="founder-headline">Chirana Yaneth</h2>

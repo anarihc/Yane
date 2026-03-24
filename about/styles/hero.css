@@ -1,0 +1,37 @@
+        /* Custom Section 1: Hero Adjustments */
+        .about-hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 180px 12vw 100px;
+            box-sizing: border-box;
+        }
+        
+        .label-mono {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 14px;
+            letter-spacing: 0.3em;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            margin-bottom: 2vw;
+        }
+
+        .about-hero-title {
+            font-family: 'Arsenica Trial', serif;
+            font-size: 6vw;
+            line-height: 1.1;
+            color: #ffffff;
+            margin: 0;
+            max-width: 50vw;
+        }
+
+        .about-hero-subtext {
+            font-family: 'Source Code Pro', monospace;
+            font-size: 1.2vw;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 3vw;
+            max-width: 40vw;
+            text-transform: uppercase;
+        }
