@@ -217,6 +217,16 @@
 
         function expandCard(cardElement) {
             if (cardElement.classList.contains('is-expanded')) return;
+
+            // Create an invisible placeholder to hold the exact grid space
+            const placeholder = document.createElement('div');
+            placeholder.className = cardElement.className;
+            placeholder.style.visibility = 'hidden';
+            placeholder.style.opacity = '0';
+            placeholder.style.pointerEvents = 'none';
+            cardElement.parentNode.insertBefore(placeholder, cardElement);
+            cardElement._placeholder = placeholder;
+
             cardElement.classList.add('is-expanded');
             overlay.classList.add('active');
             document.body.classList.add('modal-open');
@@ -225,13 +235,26 @@
         function closeCard(event, btnElement) {
             event.stopPropagation();
             const card = btnElement.closest('.port-card');
+            
+            // Remove the placeholder restoring the card to its original place
+            if (card._placeholder) {
+                card._placeholder.remove();
+                card._placeholder = null;
+            }
+
             card.classList.remove('is-expanded');
             overlay.classList.remove('active');
             document.body.classList.remove('modal-open');
         }
 
         overlay.addEventListener('click', () => {
-            document.querySelectorAll('.port-card.is-expanded').forEach(c => c.classList.remove('is-expanded'));
+            document.querySelectorAll('.port-card.is-expanded').forEach(card => {
+                if (card._placeholder) {
+                    card._placeholder.remove();
+                    card._placeholder = null;
+                }
+                card.classList.remove('is-expanded');
+            });
             overlay.classList.remove('active');
             document.body.classList.remove('modal-open');
         });
