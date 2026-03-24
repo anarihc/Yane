@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio — Yane Enterprises</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1a1c13">
+    <meta name="description" content="Explore the Yane Enterprises portfolio — Yane Informatics, Sith Sevana, Estate 006, and Thambapanni. Four companies built and backed by Yane.">
+    <link rel="canonical" href="https://yane.io/portfolio">
+
+    <link rel="icon" type="image/png" href="../assets/base-logo-2.png">
+    <link rel="apple-touch-icon" href="../assets/base-log-2.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@100;200;300;400;500;600&family=Archivo+Black&family=Pinyon+Script&family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/arsenica-trial" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/hero.css">
+    <link rel="stylesheet" href="../styles/how-it-works.css">
+    <link rel="stylesheet" href="../styles/vision.css">
+    <link rel="stylesheet" href="../styles/cta.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/loader.css">
+    <link rel="stylesheet" href="styles/portfolio.css">
+</head>
+
+<body class="loading">
+    <div id="loader" class="loader-overlay">
+        <img src="../assets/Yane_Vertical.png" class="loader-logo-static" alt="Yane Enterprises">
+    </div>
+
+    <header class="header" id="main-header">
+        <div class="logo-container">
+            <a href="/" style="display: flex; align-items: center; text-decoration: none;">
+                <img class="logo logo-hrz" src="../assets/Hrz.png" alt="Yane Logo Horizontal">
+                <img class="logo logo-base" src="../assets/base-logo.png" alt="Yane Logo Icon">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="/about" style="color: inherit; text-decoration: none;">ABOUT</a>
+            <a href="/portfolio" style="color: inherit; text-decoration: none;">PORTFOLIO</a>
+            <a href="/#invest" style="color: inherit; text-decoration: none;">INVEST</a>
+            <a href="/#contact" style="color: inherit; text-decoration: none;">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Overlay for expanded cards -->
+    <div class="portfolio-overlay" id="portfolio-overlay"></div>
+
+    <!-- SECTION 1 — PAGE HERO -->
+    <section class="vision-section portfolio-hero">
+        <div class="vision-glass portfolio-hero-glass">
+            <img src="assets/hero.jpg" class="vision-statue portfolio-statue" alt="Portfolio Hero">
+        </div>
+        <div class="vision-text-wrapper portfolio-text-wrapper">
+            <span class="label-mono hero-label">OUR PORTFOLIO</span>
+            <h2 class="vision-title">Built by us.<br>Backed by us.</h2>
+            <p class="vision-body hero-subtext">Four companies. Multiple industries. One standard of excellence.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 2 — PORTFOLIO CARDS -->
+    <section class="how-it-works portfolio-cards-section">
+        <div class="pillars-grid portfolio-grid">
+            
+            <!-- CARD 1 — Yane Informatics -->
+            <div class="pillar-card port-card" onclick="expandCard(this)">
+                <button class="close-modal-btn" onclick="closeCard(event, this)">✕</button>
+                <span class="port-tag">Digital · Design</span>
+                <h3 class="port-heading">Yane Informatics</h3>
+                <p class="port-desc">Premium web and logo designs.</p>
+                
+                <div class="port-logo-glass">
+                    <img src="assets/infor.svg" alt="Yane Informatics Logo">
+                </div>
+
+                <div class="port-expanded-content">
+                    <div class="port-expanded-header">
+                        <div class="port-logo-glass is-expanded-logo">
+                            <img src="assets/infor.svg" alt="Yane Informatics Logo">
+                        </div>
+                        <h3 class="port-expanded-title">Yane Informatics</h3>
+                    </div>
+                    <p class="port-expanded-text">Yane Informatics is Yane's digital arm — building high-end websites and brand identities for clients who understand that design is not decoration, it's strategy. Every pixel is intentional. Every project is built to the same premium standard we hold all Yane companies to.</p>
+                    <div class="port-expanded-meta">
+                        <span class="meta-item"><strong>Website:</strong> informatics.yane.io</span>
+                        <span class="meta-item"><strong>Ownership:</strong> 100% Yane</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 — Sith Sevana -->
+            <div class="pillar-card port-card" onclick="expandCard(this)">
+                <button class="close-modal-btn" onclick="closeCard(event, this)">✕</button>
+                <span class="port-tag">Health · Wellness</span>
+                <h3 class="port-heading">Sith Sevana</h3>
+                <p class="port-desc">Mental wellness, made accessible to every Sri Lankan.</p>
+                
+                <div class="port-logo-glass sith-logo-glass">
+                    <img src="assets/sith.webp" alt="Sith Sevana Logo">
+                </div>
+
+                <div class="port-expanded-content">
+                    <div class="port-expanded-header">
+                        <div class="port-logo-glass sith-logo-glass is-expanded-logo">
+                            <img src="assets/sith.webp" alt="Sith Sevana Logo">
+                        </div>
+                        <h3 class="port-expanded-title">Sith Sevana</h3>
+                    </div>
+                    <p class="port-expanded-text">Sith Sevana is an online counselling platform with a simple but powerful goal — to make mental health support accessible to everyone in Sri Lanka, regardless of where they are or what they can afford. We believe mental wellness is not a luxury. It is a right.</p>
+                    <div class="port-expanded-meta">
+                        <span class="meta-item"><strong>Website:</strong> sithsevana.lk</span>
+                        <span class="meta-item"><strong>Ownership:</strong> 50% Yane</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 — Estate 006 -->
+            <div class="pillar-card port-card" onclick="expandCard(this)">
+                <button class="close-modal-btn" onclick="closeCard(event, this)">✕</button>
+                <span class="port-tag">FMCG · Tea</span>
+                <h3 class="port-heading">Estate 006</h3>
+                <p class="port-desc">A luxury Ceylon tea brand. A true Sri Lankan heritage.</p>
+                
+                <div class="port-logo-glass">
+                    <img src="assets/006.png" alt="Estate 006 Logo">
+                </div>
+
+                <div class="port-expanded-content">
+                    <div class="port-expanded-header">
+                        <div class="port-logo-glass is-expanded-logo">
+                            <img src="assets/006.png" alt="Estate 006 Logo">
+                        </div>
+                        <h3 class="port-expanded-title">Estate <span style="font-family: 'Abril Fatface', serif;">006</span></h3>
+                    </div>
+                    <p class="port-expanded-text">Estate 006 is Yane's tribute to one of Sri Lanka's greatest gifts to the world — Ceylon tea. We don't just sell tea. We sell a story, a standard, and a piece of this island. Built for the premium market, Estate 006 carries the weight of Sri Lankan heritage in every cup.</p>
+                    <div class="port-expanded-meta">
+                        <span class="meta-item"><strong>Website:</strong> 006.yane.io</span>
+                        <span class="meta-item"><strong>Ownership:</strong> 100% Yane</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 4 — Thambapanni -->
+            <div class="pillar-card port-card" onclick="expandCard(this)">
+                <button class="close-modal-btn" onclick="closeCard(event, this)">✕</button>
+                <span class="port-tag">Fashion · Culture</span>
+                <h3 class="port-heading"><span class="thambapanni-text">Thambapanni</span></h3>
+                <p class="port-desc">Sri Lankan identity, worn.</p>
+                
+                <div class="port-logo-glass">
+                    <span class="port-text-logo">T</span>
+                </div>
+
+                <div class="port-expanded-content">
+                    <div class="port-expanded-header">
+                        <div class="port-logo-glass is-expanded-logo">
+                            <span class="port-text-logo">T</span>
+                        </div>
+                        <h3 class="port-expanded-title">Thambapanni</h3>
+                    </div>
+                    <p class="port-expanded-text">Thambapanni is a cultural clothing brand rooted in the richness of Sri Lankan heritage. We take the island's history, its patterns, its identity — and bring it into contemporary fashion. Not costume. Not nostalgia. A living, wearable expression of who we are.</p>
+                    <div class="port-expanded-meta">
+                        <span class="meta-item"><strong>Ownership:</strong> 100% Yane</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- SECTION 3 — BOTTOM CTA BAND -->
+    <section class="cta-section" id="contact">
+        <div class="cta-text-wrapper">
+            <h2 class="cta-title">Building<br>something in<br>Sri Lanka?</h2>
+            <p class="cta-body">We'd like to hear about it.</p>
+            <button class="cta-button" onclick="window.location.href='mailto:info@yane.io'">
+                <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="cta-glass">
+            <img src="../assets/srilanka_2.webp" class="cta-image" alt="Sri Lanka satellite view">
+        </div>
+    </section>
+
+    <footer class="footer">
+        <img src="../assets/Hrz.png" class="footer-logo" alt="Yane Logo">
+        
+        <div class="footer-info-grid">
+            <div class="footer-column">
+                <span class="footer-label">Management:</span>
+                <a href="mailto:info@yane.io" class="footer-value">info@yane.io</a>
+            </div>
+            <div class="footer-column">
+                <span class="footer-label">Instagram:</span>
+                <a href="https://instagram.com/anarihcc" target="_blank" class="footer-value">@anarihcc</a>
+            </div>
+            <div class="footer-column">
+                <span class="footer-label">Made by:</span>
+                <span class="footer-value">Chirana Yaneth</span>
+            </div>
+            <div class="footer-column">
+                <span class="footer-label">Rights:</span>
+                <span class="footer-value">All rights reserved</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Modal Expansion Logic
+        const overlay = document.getElementById('portfolio-overlay');
+
+        function expandCard(cardElement) {
+            if (cardElement.classList.contains('is-expanded')) return;
+            cardElement.classList.add('is-expanded');
+            overlay.classList.add('active');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeCard(event, btnElement) {
+            event.stopPropagation();
+            const card = btnElement.closest('.port-card');
+            card.classList.remove('is-expanded');
+            overlay.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        }
+
+        overlay.addEventListener('click', () => {
+            document.querySelectorAll('.port-card.is-expanded').forEach(c => c.classList.remove('is-expanded'));
+            overlay.classList.remove('active');
+            document.body.classList.remove('modal-open');
+        });
+
+        // Handle Loader Removal
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                document.body.classList.remove('loading');
+            }, 800);
+        });
+
+        const header = document.getElementById('main-header');
+        const logoContainer = document.querySelector('.logo-container');
+
+        logoContainer.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && header.classList.contains('scrolled')) {
+                if (!header.classList.contains('expanded')) {
+                    e.preventDefault();
+                    header.classList.add('expanded');
+                }
+            }
+        });
+
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > 50) {
+                header.classList.add('scrolled');
+                if (header.classList.contains('expanded') && Math.abs(currentScrollY - lastScrollY) > 30) {
+                    header.classList.remove('expanded');
+                }
+            } else {
+                header.classList.remove('scrolled');
+                header.classList.remove('expanded');
+            }
+            lastScrollY = currentScrollY;
+        });
+    </script>
+</body>
+</html>
