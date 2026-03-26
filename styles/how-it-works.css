@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    width: calc(28vw * 3 + 3vw * 2); /* Matches total grid width: 3 cards + 2 gaps = 90vw */
+    width: calc(22vw * 3 + 3vw * 2); /* Matches total grid width: 3 cards + 2 gaps = 72vw */
 }
 
 .how-title {
@@ -31,7 +31,7 @@
 .how-subtitle {
     font-family: 'Arsenica Trial', serif;
     font-weight: 700;
-    font-size: 7vw;
+    font-size: 5.5vw;
     color: #ffffff;
     margin: -1vw 0 0 0;
     text-align: right;
@@ -60,11 +60,11 @@
 }
 
 .pillar-card {
-    width: 28vw;
-    height: 28vw;
+    width: 22vw;
+    height: 22vw;
     flex-shrink: 0;
-    border-radius: 4vw;
-    padding: 3vw;
+    border-radius: 3vw;
+    padding: 2.5vw;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -125,7 +125,7 @@
 /* Card number */
 .pillar-number {
     font-family: 'Archivo Black', sans-serif;
-    font-size: 3.5vw;
+    font-size: 2.8vw;
     color: transparent;
     -webkit-text-stroke: 0.08vw #ffffff;
     line-height: 1;
@@ -134,8 +134,8 @@
 
 /* Card heading */
 .pillar-heading {
-    font-family: 'Abril Fatface', serif;
-    font-size: 3.5vw;
+    font-family: 'Arsenica Trial', serif;
+    font-size: 2.7vw;
     color: #ffffff;
     margin: 0 0 1.2vw 0;
     line-height: 1;
@@ -145,7 +145,7 @@
 /* Card body text */
 .pillar-text {
     font-family: 'Source Code Pro', monospace;
-    font-size: clamp(9px, 1.1vw, 18px); /* Holds at 11px minimum as cards shrink */
+    font-size: clamp(8px, 0.9vw, 15px); /* Scaled down to fit smaller cards */
     color: #ffffff;
     line-height: 1.6;
     margin: 0;
